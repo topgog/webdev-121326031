@@ -65,6 +65,6 @@ got: {"jsonrpc":"2.0","id":4,"method":"tools/call","params":{"name":"find_lectur
 
 ## The description experiment
 
-I changed only the description of find_lecture, from a precise one  to a vague one ("Gets lecture info for you."). I could not see whether the model chose differently: Gemini stopped with "Usage limit reached for gemini-3.8-flash" before it picked a tool, so I have no result for the vague version. With the precise description, Gemini chose find_lecture on its own for "What does lecture 7 cover?", and I expect the vague one to make that choice less reliable, because the description is the only thing the model reads when it picks a tool.
+I did not complete the description experiment. I planned to change only the description of find_lecture from a precise one to a vague one (for example "Gets lecture info for you."), but Gemini kept stopping with "Usage limit reached for gemini-3.8-flash", so I never ran it with a vague description and I have no result for it. With the precise description, Gemini chose find_lecture on its own for "What does lecture 7 cover?". I expect a vague description would make that choice less reliable, because the description is the only thing the model reads when it picks a tool, but this is an expectation, not something I observed.
 
 <!-- Three sentences: what you changed in the description, whether the model chose the tool differently, and why you think so. -->
