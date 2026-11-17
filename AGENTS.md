@@ -3,19 +3,21 @@
 Read this file at the start of every session. Keep it short and correct; update it when the project changes.
 
 ## Project
-<!-- One or two sentences: what the app does and for whom. Link SPEC.md. -->
-See `SPEC.md` for goals, non-goals and acceptance criteria.
+
+Уеб приложение за резервация на работни станции в университетски лаборатории: студентите резервират и отменят свои резервации, персоналът управлява лабораториите.
 
 ## Commands
-<!-- How to install, run, test. Keep these exact and working. -->
-- Install: 
-- Run: 
-- Test: 
-- Coverage: 
-- MCP server: 
+
+- Install: `npm install`
+- Run: `npm start`
+- Test: `npm test`
+- MCP server: `npm run --silent mcp`
 
 ## Conventions
-<!-- Folder layout, naming, where business rules live, how errors are returned to the client. -->
+
+- Три слоя, които не се прескачат: `src/routes/` → `src/services/` → `src/data/`. SQL има само в `src/data/`.
+- Бизнес правилата са в `src/services/`, а всяко правило има тест, който го назовава.
+- Всяка промяна на схемата е нов номериран файл в `migrations/`; миграция, която вече е изпълнена, не се редактира.
 
 ## Layers
 <!-- Fill in the file or folder for each layer. -->
@@ -30,7 +32,7 @@ that talks to the database directly is a second, unguarded way into your data: n
 
 ## The model feature
 <!-- Provider, env var, and the call site. -->
-- The provider is named in exactly one file: 
+- The provider is named in exactly one file:
 - The key comes from an environment variable and is never committed or logged.
 - Every call has a timeout and a deterministic fallback, so the app still works when the provider is down or rate-limited.
 - The model's output is re-checked against real data before anything is saved or shown.
