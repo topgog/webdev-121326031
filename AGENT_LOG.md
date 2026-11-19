@@ -33,3 +33,10 @@ One entry per agent session, newest at the bottom. Be honest: what went wrong is
 - Checkpoints: /mcp to check the connection, "Allow once" for the tool call, /stats for the tokens
 - Went wrong: "Usage limit reached for gemini-3.8-flash" stopped the agent twice; the experiment with a vague description was not run
 - Changed by hand: nothing in this session
+
+## 2026-11-19 · Slice 1 (sign-in and list of labs), built by Claude
+- Goal: build slice 1 from SPEC.md (AC-9, AC-10, AC-11), because Gemini CLI kept failing
+- Delegated: the plan and all the code (migration, layers, screens, tests), written by Claude (a chat assistant, not Gemini CLI); it had no access to my repository, I got the files as a zip and unpacked them; it also chose and installed express, which is on the "always ask before" list, and I allowed it by handing it the whole step; the first draft of the "Spec vs result" note is also from Claude
+- Checkpoints: I approved the plan before the code; npm test (39 of 39), node checks/ex2.mjs (32/32), and I checked AC-9, AC-10 and AC-11 by hand in the browser, deleting a row from labs with sqlite3
+- Went wrong: Gemini CLI failed with "fetch failed sending request" and never reached a plan; Claude's own tests caught a bug in its password check (a damaged hash would have accepted any password), fixed before I got the files
+- Changed by hand: I wrote the "Spec vs result" note into SPEC.md and added a line to Constraints; nothing in the code

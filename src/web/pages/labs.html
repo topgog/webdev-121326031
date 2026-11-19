@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Лаборатории · Резервация на лаборатории</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="page__header">
+      <h1>Лаборатории</h1>
+      <div class="page__user">
+        <span id="user" class="muted"></span>
+        <button id="logout" class="button button--quiet" type="button">Изход</button>
+      </div>
+    </header>
+    <section id="labs-region" aria-live="polite" aria-label="Списък с лаборатории"></section>
+    <noscript><p class="alert alert--error">Страницата изисква включен JavaScript.</p></noscript>
+  </main>
+  <script src="/assets/labs.js"></script>
+</body>
+</html>

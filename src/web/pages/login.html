@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход · Резервация на лаборатории</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <main class="page page--narrow stack">
+    <div class="stack">
+      <h1>Вход</h1>
+      <p class="muted">Резервация на работни станции в лабораториите на ТУ-София.</p>
+    </div>
+
+    <form id="login-form" class="stack" novalidate>
+      <div class="field">
+        <label for="email">Имейл</label>
+        <input id="email" name="email" type="email" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="password">Парола</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required>
+      </div>
+      <p id="message" hidden></p>
+      <button id="submit" class="button" type="submit">Вход</button>
+    </form>
+    <noscript><p class="alert alert--error">Страницата изисква включен JavaScript.</p></noscript>
+  </main>
+  <script src="/assets/login.js"></script>
+</body>
+</html>

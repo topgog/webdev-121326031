@@ -7,5 +7,6 @@ One row per agent session. In Gemini CLI, type `/stats` before you quit and copy
 | 2026-11-02 | Gemini CLI (gemini-3.8-flash, gemini-3.5-flash-lite) | 14 544 | 68 | | $0.010 |
 | 2026-11-18 | Gemini CLI (gemini-3.8-flash, gemini-3.5-flash-lite) | 29 127 | 212 | | $0.021 |
 | 2026-11-01 to 2026-11-18 | Claude (separate chat assistant, not part of the course tooling) | not shown | not shown | | not computed |
+| 2026-11-19 | Claude (separate chat assistant, built slice 1; not part of the course tooling) | not shown | not shown | | not computed |
 
 Price list used: Google Gemini API list prices (https://ai.google.dev/gemini-api/docs/pricing), checked on 2026-11-02: gemini-3.8-flash $0.75 in / $3.75 out per 1M tokens (promotional price until 2026-12-31), gemini-3.5-flash-lite $0.30 in / $2.50 out per 1M tokens. 10 309 cache reads on gemini-3.8-flash (2026-11-02) were not counted. The first Gemini session of 2026-11-02 (one question about AGENTS.md) was not recorded with /stats.
